@@ -10,7 +10,7 @@ public class Shape
     private List<ShapeComponent> shapeComponents = new ArrayList<ShapeComponent>();
     private List<Location> shapePoints = new ArrayList<Location>();
     private double scale;
-    private int test = 1;
+    private int test = 2;
 
     /**
      * If the default constructor is called, scale will default to 1
