@@ -37,6 +37,14 @@ public abstract class ShapeComponent
     	}
     	this.spacing = spacing;
     }
+    @SuppressWarnings("unchecked")
+	public ArrayList<ShapeLocation> getLocations()
+    {
+    	ArrayList<ShapeLocation> locations = new ArrayList<ShapeLocation>();
+    	locations = (ArrayList<ShapeLocation>) this.locations.clone();
+    	return locations;
+    	
+    }
     
     protected abstract void setUpComponent();
 }

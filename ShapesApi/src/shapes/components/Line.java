@@ -25,7 +25,9 @@ public class Line extends ShapeComponent
 	private ShapeVector lineVector;
 
 	/**
-	 * Instantiates a new line.
+	 * Instantiates a new line. This line will create a point
+	 * at the endpoint of the line as well. If 2 lines are going to intersect,
+	 * it is preferable to make the line have length (length - spacing)
 	 *
 	 * @param spacing
 	 *            the spacing
@@ -55,6 +57,11 @@ public class Line extends ShapeComponent
 					new ShapeLocation(lineOrigin.getX() + lineVector.getX() * i,
 							lineOrigin.getY() + lineVector.getY() * i));
 		}
+	}
+
+	public ShapeLocation getEndPoint()
+	{
+		return locations.get(locations.size() - 1);
 	}
 
 }
