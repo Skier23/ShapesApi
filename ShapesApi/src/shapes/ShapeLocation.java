@@ -1,4 +1,4 @@
-package Shapes;
+package shapes;
 
 public class ShapeLocation
 {
@@ -14,5 +14,13 @@ public class ShapeLocation
     public double getX()
     {
         return this.x;
+    }
+    public double getY()
+    {
+        return this.y;
+    }
+    public double getZ()
+    {
+        return this.z;
     }
 }
