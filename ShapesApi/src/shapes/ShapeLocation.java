@@ -4,12 +4,10 @@ public class ShapeLocation
 {
     private double x;
     private double y;
-    private double z;
-    public ShapeLocation(double x, double y, double z)
+    public ShapeLocation(double x, double y)
     {
         this.x = x;
         this.y = y;
-        this.z = z;
     }
     public double getX()
     {
@@ -18,9 +16,5 @@ public class ShapeLocation
     public double getY()
     {
         return this.y;
-    }
-    public double getZ()
-    {
-        return this.z;
     }
 }

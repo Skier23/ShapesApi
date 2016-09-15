@@ -18,13 +18,16 @@ public class Shape
 {
 	
 	/** The shape components. */
-	private List<ShapeComponent> shapeComponents = new ArrayList<ShapeComponent>();
+	private ArrayList<ShapeComponent> shapeComponents = new ArrayList<ShapeComponent>();
 	
 	/** The shape points. */
-	private List<Location> shapePoints = new ArrayList<Location>();
+	private ArrayList<Location> shapePoints = new ArrayList<Location>();
 	
 	/** The scale. */
 	private double scale;
+	
+	/** The center. */
+	private ShapeLocation center;
 
 	/**
 	 * If the default constructor is called, scale will default to 1.
