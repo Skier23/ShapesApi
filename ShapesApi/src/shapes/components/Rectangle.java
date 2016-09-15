@@ -7,7 +7,6 @@ import shapes.ShapeComponent;
 import shapes.ShapeLocation;
 import shapes.ShapeVector;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Rectangle.
  *
