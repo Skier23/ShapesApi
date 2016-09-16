@@ -21,9 +21,6 @@ public class Rectangle extends ShapeComponent
 	/** The width. */
 	private double width;
 	
-	/** The center. */
-	private ShapeLocation center;
-	
 	/** The top left. */
 	private ShapeLocation topLeft;
 	

@@ -13,7 +13,6 @@ import shapes.ShapeLocation;
  */
 public class Circle extends ShapeComponent
 {
-	private ShapeLocation center;
 	private double radius;
 
 	/**
@@ -42,19 +41,22 @@ public class Circle extends ShapeComponent
 	@Override
 	protected void setUpComponent()
 	{
-		/** after lots of mathematical deriving, it was determined that to find
-		* the increment of theta that should be added repeatedly to generate a
-		* circle such that 2 points whose theta value are one increment apart
-		* have distance = spacing, the following formula should be used.
-		* q = the increment that theta should be incremented by
-		* q = cos-1(1 - (spacing^2)/(2radius^2))
-		*/
-		double thetaIncrement = Math.acos(1 - ((spacing * spacing) / (2 * radius * radius)));
-		int increments = (int) Math.round(thetaIncrement); 
+		/**
+		 * after lots of mathematical deriving, it was determined that to find
+		 * the increment of theta that should be added repeatedly to generate a
+		 * circle such that 2 points whose theta values are one increment apart
+		 * and have distance = spacing, the following formula should be used. q
+		 * = the increment that theta should be incremented by q = cos-1(1 -
+		 * (spacing^2)/(2radius^2))
+		 */
+		double thetaIncrement = Math
+				.acos(1 - ((spacing * spacing) / (2 * radius * radius)));
+		int increments = (int) Math.round(360 / thetaIncrement);
 		thetaIncrement = 360 / increments;
 		for (double i = 0; i < increments - 1; i += thetaIncrement)
 		{
-			locations.add(new ShapeLocation(radius * Math.cos(i), radius * Math.sin(i)));
+			locations.add(new ShapeLocation(radius * Math.cos(i),
+					radius * Math.sin(i)));
 		}
 	}
 

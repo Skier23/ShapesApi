@@ -14,6 +14,7 @@ public abstract class ShapeComponent
 {
 	protected double spacing;
 	protected ArrayList<ShapeLocation> locations = new ArrayList<ShapeLocation>();
+	protected ShapeLocation center;
 	private double defaultSpacing = 0.1;
     /**
      * Instantiates a new shape component.
