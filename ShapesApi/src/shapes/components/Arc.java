@@ -6,16 +6,40 @@ package shapes.components;
 import shapes.ShapeComponent;
 import shapes.ShapeLocation;
 
+// TODO: Auto-generated Javadoc
 /**
- * @author jcTyler
+ * The Class Arc.
  *
+ * @author jcTyler
  */
 public class Arc extends ShapeComponent
 {
+
+	/** The radius. */
 	private double radius;
+
+	/** The theta 1. */
 	private double theta1;
+
+	/** The theta 2. */
 	private double theta2;
-	public Arc(double spacing, ShapeLocation center, double radius, double theta1, double theta2)
+
+	/**
+	 * Instantiates a new arc.
+	 *
+	 * @param spacing
+	 *            the spacing
+	 * @param center
+	 *            the center of the circle the arc is part of
+	 * @param radius
+	 *            the radius of the circle that the arc is part of
+	 * @param theta1
+	 *            the theta 1
+	 * @param theta2
+	 *            the theta 2
+	 */
+	public Arc(double spacing, ShapeLocation center, double radius,
+			double theta1, double theta2)
 	{
 		super(spacing);
 		this.radius = radius;
@@ -23,7 +47,10 @@ public class Arc extends ShapeComponent
 		this.theta2 = theta2;
 		this.center = center;
 	}
-	/* (non-Javadoc)
+
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see shapes.ShapeComponent#setUpComponent()
 	 */
 	@Override
@@ -32,9 +59,9 @@ public class Arc extends ShapeComponent
 		/**
 		 * after lots of mathematical deriving, it was determined that to find
 		 * the increment of theta that should be added repeatedly to generate an
-		 * arc such that 2 points whose theta values are one increment apart
-		 * and have distance = spacing, the following formula should be used. q
-		 * = the increment that theta should be incremented by q = cos-1(1 -
+		 * arc such that 2 points whose theta values are one increment apart and
+		 * have distance = spacing, the following formula should be used. q =
+		 * the increment that theta should be incremented by q = cos-1(1 -
 		 * (spacing^2)/(2radius^2))
 		 */
 		double degreespan = theta2 - theta1;

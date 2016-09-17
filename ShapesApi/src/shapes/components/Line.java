@@ -51,6 +51,7 @@ public class Line extends ShapeComponent
 	@Override
 	protected void setUpComponent()
 	{
+		this.center = lineOrigin.add(lineVector.getX() / 2, lineVector.getY() / 2);
 		for (double i = 0; i < lineVector.getLength(); i += spacing)
 		{
 			locations.add(
