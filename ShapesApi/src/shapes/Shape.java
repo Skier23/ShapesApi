@@ -16,16 +16,16 @@ import org.bukkit.Location;
  */
 public class Shape
 {
-	
+
 	/** The shape components. */
 	private ArrayList<ShapeComponent> shapeComponents = new ArrayList<ShapeComponent>();
-	
+
 	/** The shape points. */
 	private ArrayList<Location> shapePoints = new ArrayList<Location>();
-	
+
 	/** The scale. */
 	private double scale;
-	
+
 	/** The center. */
 	private ShapeLocation center;
 
@@ -42,7 +42,8 @@ public class Shape
 	 * Scale is the scale of the shape. Call the default constructor to use the
 	 * default scale of 1
 	 *
-	 * @param scale the scale
+	 * @param scale
+	 *            the scale
 	 */
 	public Shape(double scale)
 	{
@@ -68,7 +69,7 @@ public class Shape
 	{
 		return scale;
 	}
-	
+
 	/**
 	 * Gets the components.
 	 *
@@ -78,15 +79,16 @@ public class Shape
 	{
 		return shapeComponents;
 	}
-	
+
 	/**
 	 * Test method.
 	 *
-	 * @param high the high
+	 * @param high
+	 *            the high
 	 */
 	public void testMethod(int high)
 	{
-		
+
 	}
 
 }

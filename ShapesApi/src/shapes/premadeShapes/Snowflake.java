@@ -4,8 +4,9 @@
 package shapes.premadeShapes;
 
 /**
- * @author jcTyler
+ * The Class Snowflake.
  *
+ * @author jcTyler
  */
 public class Snowflake
 {

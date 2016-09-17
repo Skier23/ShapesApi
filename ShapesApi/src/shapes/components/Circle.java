@@ -13,6 +13,8 @@ import shapes.ShapeLocation;
  */
 public class Circle extends ShapeComponent
 {
+	
+	/** The radius. */
 	private double radius;
 
 	/**
