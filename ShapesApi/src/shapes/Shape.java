@@ -14,7 +14,7 @@ import org.bukkit.Location;
  *
  * @author jcTyler
  */
-public class Shape
+public abstract class Shape
 {
 
 	/** The shape components. */
@@ -28,6 +28,8 @@ public class Shape
 
 	/** The center. */
 	private ShapeLocation center;
+	
+    protected ArrayList<ShapeComponent> components;
 
 	/**
 	 * If the default constructor is called, scale will default to 1.
@@ -55,10 +57,7 @@ public class Shape
 	 * This method gets called when a shape is initialized. When creating a new
 	 * shape, all components should be created and added inside of this method
 	 */
-	protected void setupShape()
-	{
-
-	}
+	protected abstract void setupShape();
 
 	/**
 	 * Gets the scale.
@@ -79,16 +78,9 @@ public class Shape
 	{
 		return shapeComponents;
 	}
-
-	/**
-	 * Test method.
-	 *
-	 * @param high
-	 *            the high
-	 */
-	public void testMethod(int high)
-	{
-
-	}
-
+	
+    public void addComponent(ShapeComponent component)
+    {
+        components.add(component);
+    }
 }
