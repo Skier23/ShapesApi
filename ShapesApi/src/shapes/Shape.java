@@ -49,8 +49,16 @@ public abstract class Shape
 	 */
 	public Shape(double scale)
 	{
-		this.scale = scale;
-		setupShape();
+	    if (scale >= 0.1)
+	    {
+	        this.scale = scale;
+	        setupShape();
+	    }
+	    else
+	    {
+	        this.scale = 1;
+	        setupShape();
+	    }
 	}
 
 	/**

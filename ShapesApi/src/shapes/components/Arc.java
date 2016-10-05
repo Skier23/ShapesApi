@@ -34,9 +34,9 @@ public class Arc extends ShapeComponent
 	 * @param radius
 	 *            the radius of the circle that the arc is part of
 	 * @param theta1
-	 *            the theta 1
+	 *            the theta 1 in degrees
 	 * @param theta2
-	 *            the theta 2
+	 *            the theta 2 in degrees
 	 */
 	public Arc(double spacing, ShapeLocation center, double radius,
 			double theta1, double theta2)
