@@ -3,7 +3,6 @@
  */
 package shapes.components;
 
-import net.minecraft.server.v1_10_R1.Convertable;
 import shapes.ShapeComponent;
 import shapes.ShapeLocation;
 

@@ -3,8 +3,6 @@
  */
 package shapes.components;
 
-import java.util.ArrayList;
-
 import shapes.ShapeComponent;
 import shapes.ShapeLocation;
 import shapes.ShapeVector;
