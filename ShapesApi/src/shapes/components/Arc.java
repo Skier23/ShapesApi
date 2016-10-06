@@ -5,6 +5,7 @@ package shapes.components;
 
 import shapes.ShapeComponent;
 import shapes.ShapeLocation;
+import shapes.ShapeLocation;
 
 // TODO: Auto-generated Javadoc
 /**

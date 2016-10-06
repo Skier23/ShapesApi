@@ -6,8 +6,6 @@ package shapes;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.bukkit.Location;
-
 // TODO: Auto-generated Javadoc
 /**
  * The Class Shape.
@@ -21,7 +19,7 @@ public abstract class Shape
 	private ArrayList<ShapeComponent> shapeComponents = new ArrayList<ShapeComponent>();
 
 	/** The shape points. */
-	private ArrayList<Location> shapePoints = new ArrayList<Location>();
+	private ArrayList<ShapeLocation> shapePoints = new ArrayList<ShapeLocation>();
 
 	/** The scale. */
 	private double scale;
@@ -90,5 +88,13 @@ public abstract class Shape
     public void addComponent(ShapeComponent component)
     {
         components.add(component);
+    }
+    public ArrayList<ShapeLocation> getLocations()
+    {
+        return shapePoints;
+    }
+    public ShapeLocation getCenter()
+    {
+        return center;
     }
 }
