@@ -13,7 +13,7 @@ import shapes.ShapeVector;
  */
 public final class Manipulate
 {
-    public Shape rotate(Shape shape)
+    public Shape rotate(Shape shape, int xDegree, int yDegree, int zDegree)
     {
         return shape;
     }
