@@ -28,11 +28,11 @@ public abstract class Shape
     private ShapeLocation center;
 
     protected ArrayList<ShapeComponent> components;
-    
+
     private int xRotation;
-    
+
     private int yRotation;
-    
+
     private int zRotation;
 
     /**
@@ -94,7 +94,7 @@ public abstract class Shape
         }
         else if (xRot < 0)
         {
-            xRot = 360 + (xRot % -360);    
+            xRot = 360 + (xRot % -360);
         }
         if (yRot >= 360)
         {
@@ -102,7 +102,7 @@ public abstract class Shape
         }
         else if (yRot < 0)
         {
-            yRot = 360 + (yRot % -360);    
+            yRot = 360 + (yRot % -360);
         }
         if (zRot >= 360)
         {
@@ -110,15 +110,23 @@ public abstract class Shape
         }
         else if (zRot < 0)
         {
-            zRot = 360 + (zRot % -360);    
+            zRot = 360 + (zRot % -360);
         }
         xRotation = xRot;
         yRotation = yRot;
         zRotation = zRot;
-        
-        for (ShapeLocation loc: shapePoints)
+
+        for (ShapeLocation loc : shapePoints)
         {
-            
+            double x = loc.getX();
+            double y = loc.getY();
+            double z = loc.getZ();
+            double newX = x * (Math.cos(zRot) * Math.cos(yRot))
+                    + y * (Math.cos(zRot) * Math.sin(yRot) * Math.sin(xRot)
+                            - Math.sin(zRot) * Math.cos(xRot))
+                    + z * (Math.cos(zRot) * Math.sin(yRot) * Math.cos(xRot)
+                            + Math.sin(zRot) * Math.sin(xRot));
+
         }
     }
 
