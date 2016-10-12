@@ -15,11 +15,8 @@ import java.util.List;
 public abstract class Shape
 {
 
-    /** The shape components. */
-    private ArrayList<ShapeComponent> shapeComponents = new ArrayList<ShapeComponent>();
-
     /** The shape points. */
-    private ArrayList<ShapeLocation> shapePoints = new ArrayList<ShapeLocation>();
+    private ArrayList<ShapeLocation> shapePoints;
 
     /** The scale. */
     private double scale;
@@ -40,6 +37,8 @@ public abstract class Shape
      */
     public Shape()
     {
+        components = new ArrayList<ShapeComponent>();
+        shapePoints = new ArrayList<ShapeLocation>();
         this.scale = 1;
         setupShape();
         xRotation = 0;
@@ -56,6 +55,8 @@ public abstract class Shape
      */
     public Shape(double scale)
     {
+        components = new ArrayList<ShapeComponent>();
+        shapePoints = new ArrayList<ShapeLocation>();
         if (scale >= 0.1)
         {
             this.scale = scale;
@@ -155,12 +156,16 @@ public abstract class Shape
      */
     protected List<ShapeComponent> getComponents()
     {
-        return shapeComponents;
+        return components;
     }
 
     public void addComponent(ShapeComponent component)
     {
         components.add(component);
+        for (ShapeLocation loc: component.getLocations())
+        {
+            shapePoints.add(loc);
+        }
     }
 
     public ArrayList<ShapeLocation> getLocations()
