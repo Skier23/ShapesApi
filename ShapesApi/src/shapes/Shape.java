@@ -126,6 +126,14 @@ public abstract class Shape
                             - Math.sin(zRot) * Math.cos(xRot))
                     + z * (Math.cos(zRot) * Math.sin(yRot) * Math.cos(xRot)
                             + Math.sin(zRot) * Math.sin(xRot));
+            double newY = x * (Math.sin(zRot) * Math.cos(yRot))
+                    + y * (Math.sin(zRot) * Math.sin(yRot) * Math.sin(xRot)
+                            + Math.cos(zRot) * Math.cos(xRot))
+                    + z * (Math.sin(zRot) * Math.sin(yRot) * Math.cos(xRot)
+                            - Math.cos(zRot) * Math.cos(xRot));
+            double newZ = -x * Math.sin(yRot) + y * Math.cos(yRot) * Math.sin(xRot)
+                    + z * Math.cos(yRot) * Math.cos(xRot);
+            
 
         }
     }

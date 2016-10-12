@@ -2,10 +2,10 @@
  * 
  */
 package shapes;
-
 /**
- * @author jcTyler
+ * The Class ShapeLocation.
  *
+ * @author jcTyler
  */
 public class ShapeLocation
 {
@@ -23,6 +23,7 @@ public class ShapeLocation
      *
      * @param x the x location
      * @param y the y location
+     * @param z the z
      */
     public ShapeLocation(double x, double y, double z)
     {
@@ -43,8 +44,11 @@ public class ShapeLocation
         this.y = y;
         this.z = 0;
     }
+    
     /**
-     * @param x
+     * Sets the x.
+     *
+     * @param x the new x
      */
     public void setX(double x)
     {
@@ -52,7 +56,9 @@ public class ShapeLocation
     }
     
     /**
-     * @param y
+     * Sets the y.
+     *
+     * @param y the new y
      */
     public void setY(double y)
     {
@@ -60,10 +66,26 @@ public class ShapeLocation
     }
     
     /**
-     * @param z
+     * Sets the z.
+     *
+     * @param z the new z
      */
     public void setZ(double z)
     {
+        this.z = z;
+    }
+    
+    /**
+     * Sets the values.
+     *
+     * @param x the x
+     * @param y the y
+     * @param z the z
+     */
+    public void setValues(double x, double y, double z)
+    {
+        this.x = x;
+        this.y = y;
         this.z = z;
     }
 
@@ -96,11 +118,13 @@ public class ShapeLocation
     {
         return this.z;
     }
+    
     /**
      * Adds values to the coordinates.
      *
      * @param x the x
      * @param y the y
+     * @param z the z
      * @return the shape location
      */
     public ShapeLocation add(double x, double y, double z)
@@ -162,6 +186,13 @@ public class ShapeLocation
         this.z += z;
         return this;
     }
+    
+    /**
+     * Adds the.
+     *
+     * @param vector the vector
+     * @return the shape location
+     */
     public ShapeLocation add(ShapeVector vector)
     {
         this.x += vector.getX();
