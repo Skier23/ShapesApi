@@ -7,7 +7,7 @@ public class Test
     public static void main(String[] args)
     {
         
-        Shape smileyFace = new SmileyFace(.1);
+        Shape smileyFace = new SmileyFace(1);
         for (ShapeLocation loc: smileyFace.getLocations())
         {
             System.out.print("(" + loc.getX() + "," + loc.getY() + ")");
