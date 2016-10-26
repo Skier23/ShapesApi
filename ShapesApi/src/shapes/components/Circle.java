@@ -29,8 +29,8 @@ public class Circle extends ShapeComponent
 	public Circle(double spacing, ShapeLocation center, double radius)
 	{
 		super(spacing);
-		this.center = center;
-		this.radius = radius;
+	    this.center = center;
+	    this.radius = radius;
 		
 	}
 
