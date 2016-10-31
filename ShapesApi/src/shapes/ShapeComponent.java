@@ -49,7 +49,6 @@ public abstract class ShapeComponent
                     "Spacing must be a value greater than 0");
         }
         this.spacing = spacing;
-        setUpComponent();
     }
 
     /**

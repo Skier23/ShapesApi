@@ -47,6 +47,7 @@ public class Arc extends ShapeComponent
 		this.theta1 = theta1;
 		this.theta2 = theta2;
 		this.center = center;
+		setUpComponent();
 	}
 
 	/*

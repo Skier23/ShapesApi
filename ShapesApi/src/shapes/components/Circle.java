@@ -31,7 +31,7 @@ public class Circle extends ShapeComponent
 		super(spacing);
 	    this.center = center;
 	    this.radius = radius;
-		
+	    setUpComponent();
 	}
 
 	/*
