@@ -52,12 +52,12 @@ public class Circle extends ShapeComponent
 		 */
 		double thetaIncrement = Math
 				.acos(1 - ((spacing * spacing) / (2 * radius * radius)));
-		int increments = (int) Math.round(360 / thetaIncrement);
-		thetaIncrement = 360 / increments;
-		for (double i = 0; i < increments - 1; i += thetaIncrement)
+		int increments = (int) Math.round((2 * Math.PI * radius)/ thetaIncrement);
+		thetaIncrement = (2 * Math.PI * radius) / increments;
+		for (int i = 0; i < increments - 1; i ++)
 		{
-			locations.add(new ShapeLocation(radius * Math.cos(i),
-					radius * Math.sin(i)));
+			locations.add(new ShapeLocation(radius * Math.cos(i * thetaIncrement),
+					radius * Math.sin(i * thetaIncrement)));
 		}
 	}
 
